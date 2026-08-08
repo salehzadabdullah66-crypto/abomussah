@@ -130,6 +130,13 @@
   padding: 0;
 }
 
+/* إخفاء الناف الرئيسي على شاشات الجوال */
+@media (max-width: 992px) {
+  .main-nav {
+    display: none !important;
+  }
+}
+
 .nav-list {
   display: flex;
   align-items: center;

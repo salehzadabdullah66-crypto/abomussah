@@ -76,11 +76,6 @@ function highlightActiveLink() {
     const href = link.getAttribute('href');
     if (href === currentPath || (currentPath === '' && href === 'index.html')) {
       link.classList.add('active');
-      if (link.closest('.main-nav') && window.innerWidth <= 992) {
-        setTimeout(() => {
-          link.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-        }, 200);
-      }
     } else {
       link.classList.remove('active');
     }
