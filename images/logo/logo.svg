@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#bf953f" />
+      <stop offset="25%" stop-color="#fcf6ba" />
+      <stop offset="50%" stop-color="#b38728" />
+      <stop offset="75%" stop-color="#fbf5b7" />
+      <stop offset="100%" stop-color="#aa771c" />
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="92" fill="#0b0b0b" stroke="url(#goldGrad)" stroke-width="6"/>
+  <circle cx="100" cy="100" r="82" fill="none" stroke="url(#goldGrad)" stroke-width="2" stroke-dasharray="8 4"/>
+  <!-- Crown / Luxury Shield Accent -->
+  <path d="M 60 70 L 100 45 L 140 70 L 125 125 L 100 145 L 75 125 Z" fill="none" stroke="url(#goldGrad)" stroke-width="5"/>
+  <path d="M 100 45 L 100 145" stroke="url(#goldGrad)" stroke-width="3"/>
+  <circle cx="100" cy="90" r="18" fill="url(#goldGrad)"/>
+  <text x="100" y="96" font-family="'Cairo', sans-serif" font-weight="900" font-size="16" fill="#080808" text-anchor="middle">آية</text>
+  <text x="100" y="172" font-family="'Cairo', sans-serif" font-weight="700" font-size="14" fill="url(#goldGrad)" text-anchor="middle">AYA CARS</text>
+</svg>

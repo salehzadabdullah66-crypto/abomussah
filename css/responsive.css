@@ -1,0 +1,253 @@
+/* -------------------------------------------------------------------
+   Aya Car Trading | معرض آية لتجارة السيارات
+   Responsive Breakpoints & Mobile Adaptations
+------------------------------------------------------------------- */
+
+/* Breakpoint 1920px (Ultra Wide) */
+@media (min-width: 1920px) {
+  :root {
+    --container-max: 1600px;
+  }
+  .hero-title {
+    font-size: 4.2rem;
+  }
+}
+
+/* Breakpoint 1400px (Desktop Large) */
+@media (max-width: 1400px) {
+  .hero-title {
+    font-size: 3.2rem;
+  }
+  .hero-owner-tagline {
+    font-size: 1.6rem;
+  }
+}
+
+/* Breakpoint 1200px (Desktop Medium) */
+@media (max-width: 1200px) {
+  .nav-list {
+    gap: 10px;
+  }
+  .nav-link {
+    font-size: 0.82rem;
+  }
+  .header-actions {
+    gap: 8px;
+  }
+  .header-brand .brand-name {
+    font-size: 1.05rem;
+  }
+  .header-brand .brand-tagline {
+    font-size: 0.68rem;
+  }
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .stats-banner-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+/* Breakpoint 992px (Tablets Landscape & Laptops) */
+@media (max-width: 992px) {
+  .site-header {
+    height: auto;
+    padding: 8px 0;
+    background: var(--bg-glass);
+    backdrop-filter: var(--glass-blur-heavy);
+    -webkit-backdrop-filter: var(--glass-blur-heavy);
+    border-bottom: var(--glass-border);
+  }
+
+  .site-header.scrolled {
+    height: auto;
+    padding: 6px 0;
+  }
+
+  .header-container {
+    flex-wrap: wrap;
+    row-gap: 8px;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .site-header .header-actions .btn {
+    display: none;
+  }
+
+  .site-header .main-nav {
+    display: flex;
+    order: 3;
+    width: 100%;
+    margin: 6px 0 2px 0;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .site-header .nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 6px 8px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .site-header .nav-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: var(--radius-full);
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid var(--border-color-muted);
+    color: var(--text-secondary);
+    transition: all 0.25s ease;
+    white-space: nowrap;
+  }
+
+  .site-header .nav-link::after {
+    display: none;
+  }
+
+  .site-header .nav-link:hover,
+  .site-header .nav-link.active {
+    background: var(--gold-gradient);
+    color: #000000;
+    font-weight: 800;
+    border-color: var(--color-gold);
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.45);
+  }
+
+  .mobile-nav-toggle {
+    display: flex;
+  }
+
+  .hero-section {
+    padding-top: 175px;
+  }
+
+  .hero-content-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    text-align: center;
+  }
+  .hero-text-box {
+    align-items: center;
+  }
+  .hero-buttons {
+    justify-content: center;
+  }
+  .hero-owner-tagline {
+    font-size: 1.4rem;
+    border-left: none;
+    border-bottom: 3px solid var(--color-gold);
+    border-radius: var(--radius-md);
+  }
+  .offer-card {
+    grid-template-columns: 1fr;
+  }
+  .offer-img-box {
+    min-height: 250px;
+  }
+
+  /* About page fixes on tablet/mobile */
+  .about-banner-section {
+    padding-top: 160px !important;
+    padding-bottom: 30px !important;
+  }
+
+  .about-section {
+    padding: 40px 0 !important;
+  }
+}
+
+/* Breakpoint 768px (Tablets Portrait) */
+@media (max-width: 768px) {
+  .section {
+    padding: 70px 0;
+  }
+  .section-title {
+    font-size: 2.2rem;
+  }
+  .hero-title {
+    font-size: 2.4rem;
+  }
+  .hero-stats-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    text-align: center;
+  }
+  .filter-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Breakpoint 576px (Mobile Large) */
+@media (max-width: 576px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  .stats-banner-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+  .hero-owner-tagline {
+    font-size: 1.15rem;
+    padding: 10px 16px;
+  }
+
+  /* About page — small mobile spacing fixes */
+  .about-banner-section {
+    padding-top: 150px !important;
+    padding-bottom: 20px !important;
+  }
+
+  .about-section {
+    padding: 30px 0 !important;
+  }
+
+  .hero-content-grid {
+    gap: 16px;
+  }
+
+  .about-image-wrapper .moving-car,
+  .about-image-wrapper .spinning-car {
+    width: 220px !important;
+    margin-top: 0 !important;
+  }
+}
+
+/* Breakpoint 480px & 320px (Small Mobiles) */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.9rem;
+  }
+  .btn {
+    width: 100%;
+    padding: 12px 20px;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  .owner-card-img {
+    height: 300px;
+  }
+}

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>معرض آية لتجارة السيارات | الصفحة الرئيسية | Aya Car Trading</title>
+  <meta name="description" content="معرض آية لتجارة السيارات - خيارك الأول لشراء وأحدث السيارات الفاخرة والرياضية. أبو موسى... لديكم لا خوف عليكم.">
+  <meta name="keywords" content="معرض آية, تجارة السيارات, سيارات فاخرة, مرسيدس, رولز رويس, بورش, بي ام دبليو, أبو موسى">
+  
+  <!-- Open Graph / SEO -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="معرض آية لتجارة السيارات | Aya Car Trading">
+  <meta property="og:description" content="أبو موسى... لديكم لا خوف عليكم - أرقى وأحدث السيارات الفاخرة بأفضل الأسعار والضمانات.">
+  <meta property="og:image" content="images/logo/logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/logo/logo.png">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Page Preloader Screen -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-logo-wrap">
+      <div class="loader-spinner"></div>
+      <img src="images/logo/logo.png" alt="Aya Car Trading Logo" style="width: 100%; height: 100%; object-fit: contain;">
+    </div>
+    <div class="loader-brand" data-i18n="brand_name">معرض آية لتجارة السيارات</div>
+    <div style="color: var(--color-gold); font-size: 0.9rem; font-weight: 700; margin-top: 8px;" data-i18n="tagline">أبو موسى... لديكم لا خوف عليكم</div>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="header-brand">
+        <div class="logo-wrapper">
+          <img src="images/logo/logo.png" alt="Aya Car Trading Logo" class="logo-img">
+        </div>
+        <div class="brand-text">
+          <span class="brand-name" data-i18n="brand_name">معرض آية لتجارة السيارات</span>
+          <span class="brand-tagline" data-i18n="tagline">أبو موسى... لديكم لا خوف عليكم</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link active" data-i18n="nav_home">الرئيسية</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="nav_about">عن المعرض</a></li>
+          <li><a href="cars.html" class="nav-link" data-i18n="nav_cars">السيارات</a></li>
+          <li><a href="services.html" class="nav-link" data-i18n="nav_services">خدماتنا</a></li>
+          <li><a href="financing.html" class="nav-link" data-i18n="nav_financing">التمويل</a></li>
+          <li><a href="gallery.html" class="nav-link" data-i18n="nav_gallery">معرض الصور</a></li>
+          <li><a href="offers.html" class="nav-link" data-i18n="nav_offers">العروض</a></li>
+          <li><a href="testimonials.html" class="nav-link" data-i18n="nav_testimonials">آراء العملاء</a></li>
+          <li><a href="faq.html" class="nav-link" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
+          <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">اتصل بنا</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action Controls -->
+      <div class="header-actions">
+        <!-- Search Trigger -->
+        <button class="action-btn search-trigger-btn" aria-label="Search">
+          <i class="fas fa-search"></i>
+        </button>
+
+        <!-- Theme Toggle -->
+        <button class="action-btn theme-toggle-btn" aria-label="Toggle Dark/Light Mode">
+          <i class="fas fa-sun theme-toggle-icon"></i>
+        </button>
+
+        <!-- Language Toggle -->
+        <button class="lang-toggle" aria-label="Switch Language">
+          <i class="fas fa-globe"></i>
+          <span class="lang-toggle-text">EN</span>
+        </button>
+
+        <!-- Quick Call & WhatsApp -->
+        <a href="tel:+963936801748" class="action-btn" aria-label="Call Us">
+          <i class="fas fa-phone"></i>
+        </a>
+        <a href="https://wa.me/963936801748" target="_blank" class="action-btn" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp" style="color: #25d366;"></i>
+        </a>
+
+        <!-- Book CTA Button -->
+        <a href="contact.html" class="btn btn-gold btn-header" data-i18n="book_now">احجز الآن</a>
+
+        <!-- Mobile Nav Hamburger Toggle -->
+        <div class="mobile-nav-toggle" aria-label="Toggle Mobile Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-nav-drawer">
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 30px;">
+      <div class="brand-text">
+        <span class="brand-name" style="font-size: 1.1rem;" data-i18n="brand_name">معرض آية لتجارة السيارات</span>
+        <span class="brand-tagline" style="font-size: 0.75rem;" data-i18n="tagline">أبو موسى... لديكم لا خوف عليكم</span>
+      </div>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link active" data-i18n="nav_home">الرئيسية</a></li>
+      <li><a href="about.html" class="mobile-nav-link" data-i18n="nav_about">عن المعرض</a></li>
+      <li><a href="cars.html" class="mobile-nav-link" data-i18n="nav_cars">السيارات</a></li>
+      <li><a href="services.html" class="mobile-nav-link" data-i18n="nav_services">خدماتنا</a></li>
+      <li><a href="financing.html" class="mobile-nav-link" data-i18n="nav_financing">التمويل</a></li>
+      <li><a href="gallery.html" class="mobile-nav-link" data-i18n="nav_gallery">معرض الصور</a></li>
+      <li><a href="offers.html" class="mobile-nav-link" data-i18n="nav_offers">العروض</a></li>
+      <li><a href="testimonials.html" class="mobile-nav-link" data-i18n="nav_testimonials">آراء العملاء</a></li>
+      <li><a href="faq.html" class="mobile-nav-link" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
+      <li><a href="contact.html" class="mobile-nav-link" data-i18n="nav_contact">اتصل بنا</a></li>
+    </ul>
+    <div style="margin-top: auto; padding-top: 20px;">
+      <a href="contact.html" class="btn btn-gold" style="width: 100%;" data-i18n="book_now">احجز الآن</a>
+    </div>
+  </aside>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-bg-particles"></div>
+    <div class="container">
+      <div class="hero-content-grid">
+        <!-- Hero Text Column -->
+        <div class="hero-text-box" data-animate="fade-up">
+          <div class="hero-badge">
+            <i class="fas fa-crown"></i>
+            <span data-i18n="hero_subtitle">معرض آية لتجارة السيارات - خيارك الأول للسيارات الفاخرة</span>
+          </div>
+          <h1 class="hero-title" data-i18n="hero_title">الفخامة والأداء في مكان واحد</h1>
+          
+          <!-- Prominent Owner Tagline -->
+          <div class="hero-owner-tagline" data-animate="fade-up">
+            <span class="tagline-text"></span><span class="tagline-cursor"></span>
+          </div>
+
+          <p class="hero-description" data-i18n="hero_desc">
+            نقدم لكم أرقى تشكيلة من السيارات الفاخرة والرياضية من كبرى العلامات التجارية العالمية مع أفضل ضمانات وشروط التمويل والمرونة في التعامل.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="cars.html" class="btn btn-gold" data-i18n="explore_cars">
+              <i class="fas fa-car-side"></i> استكشف السيارات
+            </a>
+            <a href="contact.html" class="btn btn-outline-gold" data-i18n="contact_us">
+              <i class="fas fa-phone-alt"></i> تواصل معنا
+            </a>
+          </div>
+
+          <!-- Hero Statistics Row -->
+          <div class="hero-stats-row">
+            <div class="stat-item">
+              <span class="stat-number counter-number" data-target="15" data-suffix="+">0</span>
+              <span class="stat-label" data-i18n="years_exp">سنوات خبرة</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number counter-number" data-target="3500" data-suffix="+">0</span>
+              <span class="stat-label" data-i18n="happy_clients">عميل سعيد</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number counter-number" data-target="5000" data-suffix="+">0</span>
+              <span class="stat-label" data-i18n="cars_sold">سيارة مباعة</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Column - Owner Feature Spotlight Glass Card -->
+        <div class="hero-visual-box" data-animate="zoom-in">
+          <div class="hero-main-card floating-element">
+            <div class="owner-card-frame">
+              <img src="images/owner/owner.jpg" alt="أبو موسى - مالك معرض آية لتجارة السيارات" class="owner-card-img">
+              <div class="owner-card-info">
+                <span class="owner-name" data-i18n="owner_name">أبو موسى</span>
+                <span class="owner-title" data-i18n="owner_title">مالك المعرض - معرض آية لتجارة السيارات</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Animated Scroll Indicator -->
+    <div class="hero-scroll-indicator" onclick="window.scrollTo({top: window.innerHeight - 80, behavior: 'smooth'})">
+      <div class="mouse-icon">
+        <div class="wheel-dot"></div>
+      </div>
+      <span data-i18n="scroll_down">تمرير للأسفل</span>
+    </div>
+  </section>
+
+
+
+  <!-- Section: Why Choose Us -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-subtitle" data-i18n="why_us_subtitle">لماذا تختارنا</span>
+        <h2 class="section-title" data-i18n="why_us_title">مميزات معرض آية لتجارة السيارات</h2>
+        <p class="section-description" data-i18n="why_us_desc">نلتزم بتقديم تجربة اقتناء سيارة فاخرة غير مسبوقة تضمن لك الراحة والاطمئنان.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card glass-panel" data-animate="fade-up">
+          <div class="feature-icon-box">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3 class="feature-title" data-i18n="feat_1_title">ضمان معتمد شامـل</h3>
+          <p class="feature-desc" data-i18n="feat_1_desc">نوفر ضمانات معتمدة على جميع السيارات تغطي المحرك وناقل الحركة والأنظمة الميكانيكية والكهربائية.</p>
+        </div>
+
+        <div class="feature-card glass-panel" data-animate="fade-up">
+          <div class="feature-icon-box">
+            <i class="fas fa-tasks"></i>
+          </div>
+          <h3 class="feature-title" data-i18n="feat_2_title">فحص دقيق 150 نقطة</h3>
+          <p class="feature-desc" data-i18n="feat_2_desc">تخضع كل سيارة لفحص فني شامل بـ 150 نقطة مع مراقبة جودة متصارمة قبل عرضها بالمعرض.</p>
+        </div>
+
+        <div class="feature-card glass-panel" data-animate="fade-up">
+          <div class="feature-icon-box">
+            <i class="fas fa-truck-pickup"></i>
+          </div>
+          <h3 class="feature-title" data-i18n="feat_3_title">توصيل VIP للمنزل</h3>
+          <p class="feature-desc" data-i18n="feat_3_desc">خدمة شحن ونقل ملكية وتوصيل السيارة حتى باب منزلك داخل وخارج المملكة بكل سلاسة.</p>
+        </div>
+
+        <div class="feature-card glass-panel" data-animate="fade-up">
+          <div class="feature-icon-box">
+            <i class="fas fa-hand-holding-usd"></i>
+          </div>
+          <h3 class="feature-title" data-i18n="feat_4_title">تمويل وتسهيلات ميسرة</h3>
+          <p class="feature-desc" data-i18n="feat_4_desc">حلول تمويل بالتعاون مع كبرى البنوك والشركات التمويلية بأقل نسبة مرابحة وأسرع إجراءات.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Fullscreen Showcase Video Section -->
+  <section class="section showcase-video-section" data-animate="fade-up">
+    <div class="container">
+      <div class="section-header text-center" data-animate="fade-up">
+        <span class="section-subtitle" data-i18n="showcase_video_subtitle">عرض حصري بالفيديو</span>
+        <h2 class="section-title" data-i18n="showcase_video_title">جولة بالفيديو في معرض آية لتجارة السيارات</h2>
+        <p class="section-description" data-i18n="showcase_video_desc">استمتع بمشاهدة الفخامة والتميز وتغطية شاملة لأسطول سيارات المعرض.</p>
+      </div>
+
+      <div class="fullscreen-video-card glass-panel" data-animate="zoom-in">
+        <div class="fullscreen-video-wrapper">
+          <video 
+            id="mainShowcaseVideo" 
+            class="main-showcase-video" 
+            src="videos/video111.mp4.mp4" 
+            poster="images/owner/owner.jpg" 
+            autoplay 
+            muted 
+            loop 
+            controls 
+            preload="auto" 
+            playsinline>
+            متصفحك لا يدعم تشغيل الفيديو.
+          </video>
+          <button class="video-sound-toggle-btn" id="videoSoundToggle" aria-label="تشغيل الصوت">
+            <i class="fas fa-volume-mute"></i>
+          </button>
+          <div class="video-custom-overlay hidden" id="videoOverlay">
+            <button class="custom-play-btn" id="customPlayBtn" aria-label="تشغيل الفيديو">
+              <i class="fas fa-play"></i>
+            </button>
+            <span class="video-overlay-title" data-i18n="click_to_play_video">انقر لمشاهدة المعرض بالفيديو بكامل الشاشة</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Customer Video Testimonials Preview -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header" data-animate="fade-up">
+        <span class="section-subtitle" data-i18n="testi_subtitle">ثقة عملائنا</span>
+        <h2 class="section-title" data-i18n="testi_title">ماذا يقول عملاء معرض آية؟</h2>
+        <p class="section-description" data-i18n="testi_desc">استمع إلى تجارب عملائنا الكرام بعد الشراء وتجربة خدماتنا المميزة.</p>
+      </div>
+
+      <div class="filter-grid" style="grid-template-columns: repeat(3, 1fr); gap: 30px;">
+        <div class="testimonial-card" data-animate="fade-up">
+          <div class="testimonial-video-thumbnail gallery-zoom-trigger" data-video="videos/testimonial1.mp4" data-src="images/cars/car-placeholder.svg" data-caption="فيديو تجربة العميل الشيخ خالد السعيد - مشتري مرسيدس G-63">
+            <img src="images/cars/car-placeholder.svg" alt="فيديو تقييم">
+            <div class="play-video-btn"><i class="fas fa-play"></i></div>
+          </div>
+          <div class="rating-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p style="color: var(--text-secondary); font-style: italic;" data-i18n="testi_1_quote">"تعاملت مع أبو موسى وشريت جيب مرسيدس G-63، مصداقية وسرعة بالإنجاز لا يُعلى عليها. أبو موسى... لديكم لا خوف عليكم!"</p>
+          <div class="testimonial-author">
+            <img src="images/owner/owner.jpg" alt="خالد السعيد" class="author-avatar">
+            <div>
+              <div style="font-weight: 800; color: var(--text-primary);" data-i18n="testi_1_author">الشيخ خالد السعيد</div>
+              <div style="font-size: 0.8rem; color: var(--color-gold);" data-i18n="testi_1_city">الرياض</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" data-animate="fade-up">
+          <div class="testimonial-video-thumbnail gallery-zoom-trigger" data-video="videos/testimonial2.mp4" data-src="images/cars/car-placeholder.svg" data-caption="فيديو تجربة العميل صالح العبدالله - مشتري بورش 911">
+            <img src="images/cars/car-placeholder.svg" alt="فيديو تقييم">
+            <div class="play-video-btn"><i class="fas fa-play"></i></div>
+          </div>
+          <div class="rating-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p style="color: var(--text-secondary); font-style: italic;" data-i18n="testi_2_quote">"أفضل معرض لبيع السيارات الفاخرة بالمملكة. التعامل راقي جداً والتسهيلات التمويلية ممتازة."</p>
+          <div class="testimonial-author">
+            <img src="images/owner/owner.jpg" alt="صالح العبدالله" class="author-avatar">
+            <div>
+              <div style="font-weight: 800; color: var(--text-primary);" data-i18n="testi_2_author">د. فهد المنصور</div>
+              <div style="font-size: 0.8rem; color: var(--color-gold);" data-i18n="testi_2_city">جدة</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card" data-animate="fade-up">
+          <div class="testimonial-video-thumbnail gallery-zoom-trigger" data-video="videos/testimonial3.mp4" data-src="images/cars/car-placeholder.svg" data-caption="فيديو تجربة العميل المهندس سلمان القحطاني - مشتري رولز رويس">
+            <img src="images/cars/car-placeholder.svg" alt="فيديو تقييم">
+            <div class="play-video-btn"><i class="fas fa-play"></i></div>
+          </div>
+          <div class="rating-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p style="color: var(--text-secondary); font-style: italic;" data-i18n="testi_3_quote">"خدمة التوصيل الشاملة والفحص الدقيق أعطتني راحة بال تامة أثناء شراء رولز رويس."</p>
+          <div class="testimonial-author">
+            <img src="images/owner/owner.jpg" alt="م. سلمان القحطاني" class="author-avatar">
+            <div>
+              <div style="font-weight: 800; color: var(--text-primary);" data-i18n="testi_3_author">م. سلمان القحطاني</div>
+              <div style="font-size: 0.8rem; color: var(--color-gold);" data-i18n="testi_3_city">الدمام</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fiery Frame Audio Testimonial Card -->
+        <div class="fiery-audio-card" data-animate="fade-up">
+          <div class="fiery-audio-header">
+            <div class="fiery-avatar-box">
+              <img src="images/backgrounds/img.4k.jpeg" alt="الإعلامي الدكتور عبدالكريم العبدالله" class="fiery-avatar-img">
+              <div class="fiery-badge-icon"><i class="fas fa-fire-flame-curved"></i></div>
+            </div>
+            <div>
+              <div class="fiery-audio-title" data-i18n="fiery_title">التسجيل الصوتي الحصري لتقييم عميلنا المميز</div>
+              <div class="fiery-audio-author" data-i18n="fiery_author">الإعلامي الدكتور عبدالكريم العبدالله</div>
+            </div>
+          </div>
+          
+          <div class="fiery-player-box">
+            <button class="fiery-play-btn" aria-label="تشغيل التسجيل الصوتي">
+              <i class="fas fa-play"></i>
+            </button>
+            <div class="fiery-equalizer">
+              <span class="fiery-bar"></span>
+              <span class="fiery-bar"></span>
+              <span class="fiery-bar"></span>
+              <span class="fiery-bar"></span>
+              <span class="fiery-bar"></span>
+              <span class="fiery-bar"></span>
+              <span class="fiery-bar"></span>
+              <span class="fiery-bar"></span>
+              <span class="fiery-bar"></span>
+              <span class="fiery-bar"></span>
+            </div>
+            <span class="fiery-audio-time">0:00</span>
+            <audio class="fiery-audio-element" src="Audio/Audio.mp3.ogg" preload="metadata"></audio>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="images/logo/logo.png" alt="Aya Car Trading Logo" style="width: 48px; height: 48px;">
+            <span class="brand-name" style="font-size: 1.15rem;" data-i18n="brand_name">معرض آية لتجارة السيارات</span>
+          </div>
+          <p class="footer-desc" data-i18n="footer_desc">
+            معرض آية لتجارة السيارات هو وجهتك الأولى والأنسب لاقتناء أحدث وأفخم السيارات العالمية بضمانات شاملة وتسهيلات تمويلية ميسرة.
+          </p>
+          <div class="footer-tagline-box">
+            <i class="fas fa-quote-right gold-text"></i>
+            <span data-i18n="tagline">أبو موسى... لديكم لا خوف عليكم</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading" data-i18n="quick_links">روابط سريعة</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link" data-i18n="nav_home"><i class="fas fa-chevron-left"></i> الرئيسية</a></li>
+            <li><a href="about.html" class="footer-link" data-i18n="nav_about"><i class="fas fa-chevron-left"></i> عن المعرض</a></li>
+            <li><a href="cars.html" class="footer-link" data-i18n="nav_cars"><i class="fas fa-chevron-left"></i> أسطول السيارات</a></li>
+            <li><a href="services.html" class="footer-link" data-i18n="nav_services"><i class="fas fa-chevron-left"></i> خدماتنا</a></li>
+            <li><a href="financing.html" class="footer-link" data-i18n="nav_financing"><i class="fas fa-chevron-left"></i> حلول التمويل</a></li>
+            <li><a href="offers.html" class="footer-link" data-i18n="nav_offers"><i class="fas fa-chevron-left"></i> العروض الحصرية</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading" data-i18n="working_hours_location">ساعات العمل والفرع</h4>
+          <div class="footer-info-list">
+            <div class="footer-info-item">
+              <i class="fas fa-map-marker-alt footer-info-icon"></i>
+              <span data-i18n="location_address">دخولية مدينة الباب - دوار سوق الهال</span>
+            </div>
+            <div class="footer-info-item">
+              <i class="fas fa-clock footer-info-icon"></i>
+              <span data-i18n="working_hours_text">السبت - الخميس: 9:00 صباحاً - 10:00 مساءً</span>
+            </div>
+            <div class="footer-info-item">
+              <i class="fas fa-phone-alt footer-info-icon"></i>
+              <span dir="ltr">+963 936 801 748 / +963 939 569 092</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading" data-i18n="newsletter_title">النشرة البريدية</h4>
+          <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 14px;" data-i18n="newsletter_desc">اشترك ليصلك جديد وصول السيارات والعروض الحصرية:</p>
+          <div class="newsletter-box">
+            <form class="newsletter-form" onsubmit="event.preventDefault(); showToast((document.documentElement.getAttribute('lang') === 'en' ? 'Successfully subscribed to the newsletter!' : 'تم الاشتراك بنجاح في النشرة البريدية!'), 'gold');">
+              <input type="email" class="newsletter-input" data-i18n-placeholder="email_placeholder" placeholder="بريدك الإلكتروني..." required>
+              <button type="submit" class="btn btn-gold" style="padding: 12px 18px;"><i class="fas fa-paper-plane"></i></button>
+            </form>
+          </div>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" aria-label="Snapchat"><i class="fab fa-snapchat-ghost"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div data-i18n="copyright">&copy; 2026 معرض آية لتجارة السيارات (أبو موسى). جميع الحقوق محفوظة.</div>
+        <div class="footer-legal-links">
+          <a href="#" data-i18n="terms_conditions">الشروط والأحكام</a>
+          <a href="#" data-i18n="privacy_policy">سياسة الخصوصية</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Floating Action Buttons -->
+  <div class="floating-actions">
+    <a href="https://wa.me/963936801748" target="_blank" class="float-btn float-whatsapp" aria-label="WhatsApp Us">
+      <i class="fab fa-whatsapp"></i>
+      <div class="pulse-ring"></div>
+    </a>
+    <a href="tel:+963936801748" class="float-btn float-phone" aria-label="Call Us Directly">
+      <i class="fas fa-phone-alt"></i>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/theme.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/filter.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/animation.js"></script>
+</body>
+</html>
+
+
+

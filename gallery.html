@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>معرض الصور | معرض آية لتجارة السيارات</title>
+  <meta name="description" content="تصفح ألبوم صور وفيديوهات المعرض وسياراتنا الفاخرة وتسليمات العملاء المميزة.">
+
+  <link rel="icon" type="image/svg+xml" href="images/logo/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-logo-wrap">
+      <div class="loader-spinner"></div>
+      <img src="images/logo/logo.png" alt="Logo" style="width: 100%; height: 100%; object-fit: contain;">
+    </div>
+    <div class="loader-brand" data-i18n="brand_name">معرض آية لتجارة السيارات</div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="header-brand">
+        <div class="logo-wrapper"><img src="images/logo/logo.png" alt="Logo" class="logo-img"></div>
+        <div class="brand-text">
+          <span class="brand-name" data-i18n="brand_name">معرض آية لتجارة السيارات</span>
+          <span class="brand-tagline" data-i18n="tagline">أبو موسى... لديكم لا خوف عليكم</span>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link" data-i18n="nav_home">الرئيسية</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="nav_about">عن المعرض</a></li>
+          <li><a href="cars.html" class="nav-link" data-i18n="nav_cars">السيارات</a></li>
+          <li><a href="services.html" class="nav-link" data-i18n="nav_services">خدماتنا</a></li>
+          <li><a href="financing.html" class="nav-link" data-i18n="nav_financing">التمويل</a></li>
+          <li><a href="gallery.html" class="nav-link active" data-i18n="nav_gallery">معرض الصور</a></li>
+          <li><a href="offers.html" class="nav-link" data-i18n="nav_offers">العروض</a></li>
+          <li><a href="testimonials.html" class="nav-link" data-i18n="nav_testimonials">آراء العملاء</a></li>
+          <li><a href="faq.html" class="nav-link" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
+          <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">اتصل بنا</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="action-btn search-trigger-btn"><i class="fas fa-search"></i></button>
+        <button class="action-btn theme-toggle-btn"><i class="fas fa-sun theme-toggle-icon"></i></button>
+        <button class="lang-toggle"><i class="fas fa-globe"></i><span class="lang-toggle-text">EN</span></button>
+        <a href="contact.html" class="btn btn-gold btn-header" data-i18n="book_now">احجز الآن</a>
+        <div class="mobile-nav-toggle"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-nav-drawer">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link" data-i18n="nav_home">الرئيسية</a></li>
+      <li><a href="about.html" class="mobile-nav-link" data-i18n="nav_about">عن المعرض</a></li>
+      <li><a href="cars.html" class="mobile-nav-link" data-i18n="nav_cars">السيارات</a></li>
+      <li><a href="services.html" class="mobile-nav-link" data-i18n="nav_services">خدماتنا</a></li>
+      <li><a href="financing.html" class="mobile-nav-link" data-i18n="nav_financing">التمويل</a></li>
+      <li><a href="gallery.html" class="mobile-nav-link active" data-i18n="nav_gallery">معرض الصور</a></li>
+      <li><a href="offers.html" class="mobile-nav-link" data-i18n="nav_offers">العروض</a></li>
+      <li><a href="testimonials.html" class="mobile-nav-link" data-i18n="nav_testimonials">آراء العملاء</a></li>
+      <li><a href="faq.html" class="mobile-nav-link" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
+      <li><a href="contact.html" class="mobile-nav-link" data-i18n="nav_contact">اتصل بنا</a></li>
+    </ul>
+  </aside>
+
+  <!-- Title Banner -->
+  <section class="section page-banner-section">
+    <div class="container text-center" style="text-align: center;">
+      <span class="section-subtitle" data-i18n="gallery_subtitle">معرض الصور الفاخرة</span>
+      <h1 class="section-title" data-i18n="gallery_title">ألبوم صالة العرض والتسليمات</h1>
+      <p class="section-description" data-i18n="gallery_desc">لقطات حية من داخل صالة العرض وسياراتنا الاستثنائية أثناء التسليم للعملاء.</p>
+    </div>
+  </section>
+
+  <!-- Gallery Filter & Grid -->
+  <section class="section">
+    <div class="container">
+      
+      <!-- Filter Buttons -->
+      <div style="display: flex; justify-content: center; gap: 14px; margin-bottom: 50px; flex-wrap: wrap;" data-animate="fade-up">
+        <button class="btn btn-outline-gold gallery-filter-btn active" data-filter="all" data-i18n="filter_all_photos">كافة الصور</button>
+        <button class="btn btn-outline-gold gallery-filter-btn" data-filter="showroom" data-i18n="filter_showroom">صالة العرض</button>
+        <button class="btn btn-outline-gold gallery-filter-btn" data-filter="supercars" data-i18n="filter_supercars">سيارات فائقة (Supercars)</button>
+        <button class="btn btn-outline-gold gallery-filter-btn" data-filter="suv" data-i18n="filter_suv">سيارات SUV</button>
+        <button class="btn btn-outline-gold gallery-filter-btn" data-filter="deliveries" data-i18n="filter_deliveries">تسليمات VIP</button>
+      </div>
+
+      <!-- Gallery Items Grid -->
+      <div class="filter-grid" style="grid-template-columns: repeat(3, 1fr); gap: 24px;">
+        
+        <div class="gallery-item gallery-zoom-trigger" data-category="showroom" data-src="images/cars/car-placeholder.svg" data-caption="صالة عرض معرض آية الفاخرة" data-caption-en="Aya Car Trading Luxury Showroom" data-animate="fade-up">
+          <div class="car-card">
+            <div class="car-image-box" style="height: 280px;">
+              <img src="images/cars/car-placeholder.svg" alt="صالة العرض" class="car-image">
+              <div class="play-video-btn"><i class="fas fa-search-plus"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-zoom-trigger" data-category="supercars" data-src="images/cars/car-placeholder.svg" data-caption="بورش 911 GT3 RS باللون الأسود الملكي" data-caption-en="Porsche 911 GT3 RS in Royal Black" data-animate="fade-up">
+          <div class="car-card">
+            <div class="car-image-box" style="height: 280px;">
+              <img src="images/cars/car-placeholder.svg" alt="بورش GT3" class="car-image">
+              <div class="play-video-btn"><i class="fas fa-search-plus"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-zoom-trigger" data-category="suv" data-src="images/cars/car-placeholder.svg" data-caption="مرسيدس G63 AMG 2024 إصدار خاص" data-caption-en="Mercedes G63 AMG 2024 Special Edition" data-animate="fade-up">
+          <div class="car-card">
+            <div class="car-image-box" style="height: 280px;">
+              <img src="images/cars/car-placeholder.svg" alt="مرسيدس G63" class="car-image">
+              <div class="play-video-btn"><i class="fas fa-search-plus"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-zoom-trigger" data-category="deliveries" data-src="images/cars/car-placeholder.svg" data-caption="لحظة تسليم رولز رويس كولينان للعميل" data-caption-en="Rolls-Royce Cullinan Delivery to Client" data-animate="fade-up">
+          <div class="car-card">
+            <div class="car-image-box" style="height: 280px;">
+              <img src="images/cars/car-placeholder.svg" alt="تسليم رولز رويس" class="car-image">
+              <div class="play-video-btn"><i class="fas fa-search-plus"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-zoom-trigger" data-category="supercars" data-src="images/cars/car-placeholder.svg" data-caption="لامبورغيني أوروس بلمسات كربون فايبر" data-caption-en="Lamborghini Urus with Carbon Fiber Accents" data-animate="fade-up">
+          <div class="car-card">
+            <div class="car-image-box" style="height: 280px;">
+              <img src="images/cars/car-placeholder.svg" alt="لامبورغيني اوروس" class="car-image">
+              <div class="play-video-btn"><i class="fas fa-search-plus"></i></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item gallery-zoom-trigger" data-category="showroom" data-src="images/cars/car-placeholder.svg" data-caption="جانب من أسطول السيارات المتاحة بالمعرض" data-caption-en="Part of the Available Fleet at the Showroom" data-animate="fade-up">
+          <div class="car-card">
+            <div class="car-image-box" style="height: 280px;">
+              <img src="images/cars/car-placeholder.svg" alt="أسطول المعرض" class="car-image">
+              <div class="play-video-btn"><i class="fas fa-search-plus"></i></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border: none;">
+        <div data-i18n="copyright">&copy; 2026 معرض آية لتجارة السيارات (أبو موسى). جميع الحقوق محفوظة.</div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="js/theme.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/animation.js"></script>
+</body>
+</html>
+
+
+

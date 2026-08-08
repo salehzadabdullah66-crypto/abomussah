@@ -1,0 +1,88 @@
+/* -------------------------------------------------------------------
+   Aya Car Trading | معرض آية لتجارة السيارات
+   CSS Variables & Design System Tokens
+------------------------------------------------------------------- */
+
+:root {
+  /* Color Palette - Dark Mode (Default) */
+  --bg-primary: #080808;
+  --bg-secondary: #0b0b0b;
+  --bg-tertiary: #171717;
+  --bg-card: rgba(17, 17, 17, 0.7);
+  --bg-glass: rgba(15, 15, 15, 0.65);
+  --bg-glass-hover: rgba(25, 25, 25, 0.85);
+
+  /* Gold Luxury Accents */
+  --color-gold: #d4af37;
+  --color-gold-light: #f3e5ab;
+  --color-gold-dark: #aa820a;
+  --color-gold-glow: rgba(212, 175, 55, 0.35);
+  --color-gold-subtle: rgba(212, 175, 55, 0.15);
+  --gold-gradient: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
+  --gold-gradient-subtle: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(212, 175, 55, 0.05) 100%);
+
+  /* Text Colors */
+  --text-primary: #ffffff;
+  --text-secondary: #b3b3b3;
+  --text-muted: #737373;
+  --text-gold: #d4af37;
+
+  /* Borders & Shadows */
+  --border-color: rgba(212, 175, 55, 0.2);
+  --border-color-muted: rgba(255, 255, 255, 0.08);
+  --border-gold-glow: 0 0 20px rgba(212, 175, 55, 0.4);
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.8);
+  --shadow-gold: 0 10px 30px rgba(212, 175, 55, 0.25);
+
+  /* Glassmorphism */
+  --glass-blur: blur(16px);
+  --glass-blur-heavy: blur(24px);
+  --glass-border: 1px solid rgba(212, 175, 55, 0.22);
+  --glass-border-light: 1px solid rgba(255, 255, 255, 0.1);
+
+  /* Fonts */
+  --font-arabic: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-english: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 32px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-bounce: 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+  /* Spacing */
+  --header-height: 90px;
+  --container-max: 1320px;
+}
+
+/* Light Theme Variables */
+[data-theme="light"] {
+  --bg-primary: #f8f9fa;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f1f3f5;
+  --bg-card: rgba(255, 255, 255, 0.85);
+  --bg-glass: rgba(255, 255, 255, 0.75);
+  --bg-glass-hover: rgba(255, 255, 255, 0.95);
+
+  --text-primary: #121212;
+  --text-secondary: #495057;
+  --text-muted: #868e96;
+  --text-gold: #b8860b;
+
+  --border-color: rgba(184, 134, 11, 0.3);
+  --border-color-muted: rgba(0, 0, 0, 0.08);
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.15);
+  --glass-border: 1px solid rgba(184, 134, 11, 0.25);
+  --glass-border-light: 1px solid rgba(0, 0, 0, 0.08);
+}

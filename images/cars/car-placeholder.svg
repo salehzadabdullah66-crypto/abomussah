@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="goldCar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#bf953f"/>
+      <stop offset="50%" stop-color="#fcf6ba"/>
+      <stop offset="100%" stop-color="#aa771c"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141414"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bgGrad)"/>
+  <!-- Sleek Car Silhouette -->
+  <path d="M 100 350 L 150 350 Q 180 260 280 230 Q 420 200 560 230 Q 640 250 680 320 L 720 350 L 750 350 Q 770 350 770 370 L 750 390 L 50 390 L 30 370 Q 30 350 50 350 Z" fill="none" stroke="url(#goldCar)" stroke-width="6"/>
+  <!-- Windows line -->
+  <path d="M 300 235 Q 430 205 540 235 Q 580 260 600 300 L 280 300 Z" fill="rgba(212, 175, 55, 0.15)" stroke="url(#goldCar)" stroke-width="3"/>
+  <!-- Wheels -->
+  <circle cx="210" cy="380" r="45" fill="#000" stroke="url(#goldCar)" stroke-width="6"/>
+  <circle cx="210" cy="380" r="20" fill="url(#goldCar)"/>
+  <circle cx="610" cy="380" r="45" fill="#000" stroke="url(#goldCar)" stroke-width="6"/>
+  <circle cx="610" cy="380" r="20" fill="url(#goldCar)"/>
+  <!-- Headlight Glow -->
+  <polygon points="720,330 790,320 790,360 730,350" fill="rgba(255, 245, 180, 0.6)"/>
+  <text x="400" y="460" font-family="'Cairo', sans-serif" font-weight="800" font-size="22" fill="url(#goldCar)" text-anchor="middle">معرض آية لتجارة السيارات - AYA LUXURY CARS</text>
+</svg>

@@ -1,0 +1,543 @@
+/* -------------------------------------------------------------------
+   Aya Car Trading | معرض آية لتجارة السيارات
+   Reusable Cards CSS Components
+------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------
+   1. Luxury Car Card
+------------------------------------------------------------------- */
+.car-card {
+  position: relative;
+  background: var(--bg-glass);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+}
+
+.car-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(212, 175, 55, 0.5);
+  box-shadow: var(--shadow-gold);
+}
+
+.car-image-box {
+  position: relative;
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+  background: #000000;
+}
+
+.car-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.car-card:hover .car-image {
+  transform: scale(1.08);
+}
+
+/* Badges overlay on card image */
+.car-badges {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 2;
+}
+
+html[lang="en"] .car-badges {
+  right: auto;
+  left: 14px;
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  z-index: 2;
+  transition: all var(--transition-fast);
+}
+
+html[lang="en"] .favorite-btn {
+  left: auto;
+  right: 14px;
+}
+
+.favorite-btn.active,
+.favorite-btn:hover {
+  background: var(--color-gold);
+  color: #000000;
+  border-color: var(--color-gold);
+}
+
+/* Car Details Container */
+.car-card-body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.car-brand-tag {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.car-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 4px 0 14px;
+}
+
+.car-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 12px 0;
+  border-top: 1px solid var(--border-color-muted);
+  border-bottom: 1px solid var(--border-color-muted);
+  margin-bottom: 18px;
+}
+
+.spec-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.spec-item i {
+  color: var(--color-gold);
+  font-size: 1rem;
+}
+
+.car-card-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.car-price-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.car-price {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--color-gold);
+}
+
+/* -------------------------------------------------------------------
+   2. Service Card
+------------------------------------------------------------------- */
+.service-card {
+  padding: 36px 28px;
+  background: var(--bg-glass);
+  backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-gold);
+  box-shadow: var(--shadow-gold);
+}
+
+.service-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-md);
+  background: var(--gold-gradient-subtle);
+  border: 1px solid var(--border-color);
+  color: var(--color-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin-bottom: 24px;
+}
+
+.service-card:hover .service-icon {
+  background: var(--gold-gradient);
+  color: #000000;
+}
+
+.service-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.service-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* -------------------------------------------------------------------
+   3. Special Offer Card & Countdown
+------------------------------------------------------------------- */
+.offer-card {
+  position: relative;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: var(--shadow-lg);
+}
+
+.offer-img-box {
+  position: relative;
+  min-height: 350px;
+}
+
+.offer-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.offer-content {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Countdown Timer Component */
+.countdown-box {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0 28px;
+}
+
+.countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  height: 65px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+}
+
+.countdown-num {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--color-gold);
+  line-height: 1;
+}
+
+.countdown-txt {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+/* -------------------------------------------------------------------
+   4. Customer Video Testimonial Card
+------------------------------------------------------------------- */
+.testimonial-card {
+  background: var(--bg-glass);
+  backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: all var(--transition-normal);
+}
+
+.testimonial-card:hover {
+  border-color: var(--color-gold);
+  box-shadow: var(--shadow-gold);
+}
+
+.testimonial-video-thumbnail {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.testimonial-video-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.play-video-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--gold-gradient);
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+  transition: transform var(--transition-bounce);
+}
+
+.play-video-btn:hover {
+  transform: translate(-50%, -50%) scale(1.15);
+}
+
+.rating-stars {
+  color: var(--color-gold);
+  font-size: 0.9rem;
+  display: flex;
+  gap: 4px;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.author-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid var(--color-gold);
+  object-fit: cover;
+}
+
+/* ===================================================================
+   5. Fiery Audio Testimonial Card (إطار ناري فاخر للتسجيل الصوتي)
+   =================================================================== */
+.fiery-audio-card {
+  position: relative;
+  background: rgba(18, 12, 25, 0.9);
+  backdrop-filter: blur(16px);
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+  margin-top: 36px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(255, 69, 0, 0.35), 0 0 60px rgba(255, 140, 0, 0.2);
+  transition: all 0.4s ease;
+  z-index: 1;
+  grid-column: 1 / -1;
+}
+
+.fiery-audio-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ff1400, #ff7700, #ffdd00, #ff0055, #ff5500, #ff1400);
+  background-size: 400% 400%;
+  border-radius: calc(var(--radius-lg) + 2px);
+  z-index: -1;
+  animation: fieryBorderGlow 5s linear infinite;
+  filter: drop-shadow(0 0 12px rgba(255, 85, 0, 0.8));
+}
+
+@keyframes fieryBorderGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.fiery-audio-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 0%, rgba(255, 100, 0, 0.15), transparent 70%);
+  pointer-events: none;
+}
+
+.fiery-avatar-box {
+  position: relative;
+  width: 68px;
+  height: 68px;
+  flex-shrink: 0;
+}
+
+.fiery-avatar-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ffaa00;
+  box-shadow: 0 0 20px rgba(255, 69, 0, 0.7);
+  animation: fieryPulse 2.5s ease-in-out infinite alternate;
+}
+
+.fiery-badge-icon {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff1400, #ffaa00);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  box-shadow: 0 0 10px rgba(255, 69, 0, 0.9);
+}
+
+.fiery-audio-author {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #ffd700;
+  margin-top: 4px;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+}
+
+.fiery-player-box {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 14px 22px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 140, 0, 0.35);
+  box-shadow: inset 0 0 15px rgba(255, 69, 0, 0.2);
+}
+
+.fiery-play-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #ff4500, #ff8c00);
+  color: #ffffff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px rgba(255, 69, 0, 0.7);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  flex-shrink: 0;
+}
+
+.fiery-play-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(255, 140, 0, 0.95);
+}
+
+.fiery-equalizer {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  height: 28px;
+  flex-grow: 1;
+}
+
+.fiery-bar {
+  width: 5px;
+  height: 20%;
+  background: linear-gradient(to top, #ff4500, #ffd700);
+  border-radius: 3px;
+  transition: height 0.15s ease;
+}
+
+.fiery-audio-card.playing .fiery-bar {
+  animation: soundWave 0.8s ease-in-out infinite alternate;
+}
+
+.fiery-bar:nth-child(1) { animation-delay: 0.1s; }
+.fiery-bar:nth-child(2) { animation-delay: 0.3s; }
+.fiery-bar:nth-child(3) { animation-delay: 0.2s; }
+.fiery-bar:nth-child(4) { animation-delay: 0.4s; }
+.fiery-bar:nth-child(5) { animation-delay: 0.15s; }
+.fiery-bar:nth-child(6) { animation-delay: 0.35s; }
+.fiery-bar:nth-child(7) { animation-delay: 0.25s; }
+.fiery-bar:nth-child(8) { animation-delay: 0.45s; }
+.fiery-bar:nth-child(9) { animation-delay: 0.05s; }
+.fiery-bar:nth-child(10) { animation-delay: 0.3s; }
+
+@keyframes soundWave {
+  0% { height: 15%; }
+  100% { height: 100%; }
+}
+
+.fiery-audio-time {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffd700;
+  font-family: monospace;
+  flex-shrink: 0;
+}
+
+@media (max-width: 576px) {
+  .fiery-audio-card {
+    padding: 20px 16px;
+  }
+  .fiery-player-box {
+    padding: 10px 14px;
+    gap: 12px;
+  }
+  .fiery-equalizer {
+    gap: 3px;
+  }
+  .fiery-bar {
+    width: 3px;
+  }
+}

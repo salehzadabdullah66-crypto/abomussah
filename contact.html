@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>اتصل بنا | معرض آية لتجارة السيارات</title>
+  <meta name="description" content="تواصل مع معرض آية لتجارة السيارات (أبو موسى)، موقع المعرض بالرياض وساعات العمل ووسائل الاتصال المباشر.">
+
+  <link rel="icon" type="image/svg+xml" href="images/logo/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-logo-wrap">
+      <div class="loader-spinner"></div>
+      <img src="images/logo/logo.png" alt="Logo" style="width: 100%; height: 100%; object-fit: contain;">
+    </div>
+    <div class="loader-brand" data-i18n="brand_name">معرض آية لتجارة السيارات</div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="header-brand">
+        <div class="logo-wrapper"><img src="images/logo/logo.png" alt="Logo" class="logo-img"></div>
+        <div class="brand-text">
+          <span class="brand-name" data-i18n="brand_name">معرض آية لتجارة السيارات</span>
+          <span class="brand-tagline" data-i18n="tagline">أبو موسى... لديكم لا خوف عليكم</span>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link" data-i18n="nav_home">الرئيسية</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="nav_about">عن المعرض</a></li>
+          <li><a href="cars.html" class="nav-link" data-i18n="nav_cars">السيارات</a></li>
+          <li><a href="services.html" class="nav-link" data-i18n="nav_services">خدماتنا</a></li>
+          <li><a href="financing.html" class="nav-link" data-i18n="nav_financing">التمويل</a></li>
+          <li><a href="gallery.html" class="nav-link" data-i18n="nav_gallery">معرض الصور</a></li>
+          <li><a href="offers.html" class="nav-link" data-i18n="nav_offers">العروض</a></li>
+          <li><a href="testimonials.html" class="nav-link" data-i18n="nav_testimonials">آراء العملاء</a></li>
+          <li><a href="faq.html" class="nav-link" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
+          <li><a href="contact.html" class="nav-link active" data-i18n="nav_contact">اتصل بنا</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="action-btn search-trigger-btn"><i class="fas fa-search"></i></button>
+        <button class="action-btn theme-toggle-btn"><i class="fas fa-sun theme-toggle-icon"></i></button>
+        <button class="lang-toggle"><i class="fas fa-globe"></i><span class="lang-toggle-text">EN</span></button>
+        <a href="contact.html" class="btn btn-gold btn-header" data-i18n="book_now">احجز الآن</a>
+        <div class="mobile-nav-toggle"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-nav-drawer">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link" data-i18n="nav_home">الرئيسية</a></li>
+      <li><a href="about.html" class="mobile-nav-link" data-i18n="nav_about">عن المعرض</a></li>
+      <li><a href="cars.html" class="mobile-nav-link" data-i18n="nav_cars">السيارات</a></li>
+      <li><a href="services.html" class="mobile-nav-link" data-i18n="nav_services">خدماتنا</a></li>
+      <li><a href="financing.html" class="mobile-nav-link" data-i18n="nav_financing">التمويل</a></li>
+      <li><a href="gallery.html" class="mobile-nav-link" data-i18n="nav_gallery">معرض الصور</a></li>
+      <li><a href="offers.html" class="mobile-nav-link" data-i18n="nav_offers">العروض</a></li>
+      <li><a href="testimonials.html" class="mobile-nav-link" data-i18n="nav_testimonials">آراء العملاء</a></li>
+      <li><a href="faq.html" class="mobile-nav-link" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
+      <li><a href="contact.html" class="mobile-nav-link active" data-i18n="nav_contact">اتصل بنا</a></li>
+    </ul>
+  </aside>
+
+  <!-- Title Banner -->
+  <section class="section" style="padding-top: calc(var(--header-height) + 60px); padding-bottom: 40px; background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.1) 0%, var(--bg-primary) 70%);">
+    <div class="container text-center" style="text-align: center;">
+      <span class="section-subtitle">تواصل مباشر</span>
+      <h1 class="section-title">يسعدنا تواصلك واستقبال زيارتك</h1>
+      <p class="section-description">تواصل مع فريق مبيعات معرض آية لتجارة السيارات لحجز موعد معاينة أو تجربة قيادة.</p>
+    </div>
+  </section>
+
+  <!-- Contact Form & Info Grid -->
+  <section class="section">
+    <div class="container">
+      <div class="hero-content-grid" style="grid-template-columns: 1fr 1fr; gap: 40px;">
+        
+        <!-- Contact Information Cards -->
+        <div data-animate="fade-up">
+          <h2 class="section-title" style="font-size: 2rem; margin-bottom: 24px;">معلومات التواصل والفرع</h2>
+          
+          <div class="service-card" style="margin-bottom: 20px;">
+            <div class="service-icon"><i class="fas fa-map-marked-alt"></i></div>
+            <h3 class="service-title">عنوان المعرض</h3>
+            <p class="service-desc">دخولية مدينة الباب - دوار سوق الهال</p>
+          </div>
+
+          <div class="service-card" style="margin-bottom: 20px;">
+            <div class="service-icon"><i class="fas fa-phone-volume"></i></div>
+            <h3 class="service-title">أرقام التواصل والواتساب</h3>
+            <div class="service-desc" dir="ltr" style="font-size: 1.1rem; font-weight: 700; color: var(--color-gold); display: flex; flex-direction: column; gap: 6px;">
+              <a href="tel:+963936801748" style="display: inline-flex; align-items: center; gap: 8px;"><i class="fas fa-phone"></i> +963 936 801 748</a>
+              <a href="tel:+963939569092" style="display: inline-flex; align-items: center; gap: 8px;"><i class="fas fa-phone"></i> +963 939 569 092</a>
+              <a href="tel:+963934463608" style="display: inline-flex; align-items: center; gap: 8px;"><i class="fas fa-phone"></i> +963 934 463 608</a>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="fas fa-clock"></i></div>
+            <h3 class="service-title">أوقات العمل الرسمية</h3>
+            <p class="service-desc">الفترة الصباحية: 9:00 ص - 12:30 م<br>الفترة المسائية: 4:00 م - 10:00 م (السبت - الخميس)</p>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="glass-panel" style="padding: 40px;" data-animate="fade-up">
+          <h3 class="section-title" style="font-size: 1.8rem; margin-bottom: 20px;"><i class="fas fa-paper-plane gold-text"></i> أرسل رسالة مباشرة</h3>
+          
+          <form data-validate>
+            <div class="form-group">
+              <label class="form-label">الاسم الكامل</label>
+              <input type="text" class="form-control" placeholder="أدخل اسمك..." required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">رقم الجوال</label>
+              <input type="tel" class="form-control" placeholder="+963..." required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">السيارة المطلوبة أو نوع الاستفسار</label>
+              <select class="form-control" required>
+                <option value="buy">استفسار عن شراء سيارة</option>
+                <option value="finance">طلب تمويل وتقسيط</option>
+                <option value="tradein">طلب تقييم واستبدال سيارة</option>
+                <option value="custom">طلب استيراد مواصفات خاصة</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">نص الرسالة أو الاستفسار</label>
+              <textarea class="form-control" placeholder="اكتب تفاصيل استفسارك هنا..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-gold" style="width: 100%; margin-top: 10px;">إرسال الاستفسار الآن</button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Official Contact Banner Poster -->
+      <div style="margin-top: 60px;" data-animate="fade-up">
+        <div class="glass-panel" style="padding: 24px; text-align: center;">
+          <span class="section-subtitle" style="margin-bottom: 16px;">البوستر الرسمي للمعرض</span>
+          <h3 class="section-title" style="font-size: 1.8rem; margin-bottom: 20px;">شركة آية لتجارة السيارات - أبو موسى</h3>
+          
+          <div style="position: relative; max-width: 900px; margin: 0 auto; border-radius: var(--radius-lg); overflow: hidden; border: 2px solid var(--color-gold); box-shadow: var(--shadow-gold);">
+            <img src="images/backgrounds/contact-poster.jpg" alt="شركة آية لتجارة السيارات - ابو موسى - بوستر اتصل بنا" style="width: 100%; height: auto; display: block; filter: brightness(1.02) contrast(1.03);">
+          </div>
+
+          <div style="display: flex; justify-content: center; gap: 16px; margin-top: 24px; flex-wrap: wrap;">
+            <a href="https://wa.me/963936801748" target="_blank" class="btn btn-gold"><i class="fab fa-whatsapp"></i> تواصل عبر الواتساب المباشر</a>
+            <a href="tel:+963936801748" class="btn btn-outline-gold"><i class="fas fa-phone-alt"></i> الاتصال المباشر بأبو موسى</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border: none;">
+        <div>&copy; 2026 معرض آية لتجارة السيارات (أبو موسى). جميع الحقوق محفوظة.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/theme.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/animation.js"></script>
+</body>
+</html>
+
+
+

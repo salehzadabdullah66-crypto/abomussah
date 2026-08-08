@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الأسئلة الشائعة | معرض آية لتجارة السيارات</title>
+  <meta name="description" content="إجابات على كافة الأسئلة الشائعة حول الشراء والتمويل والضمان والشحن بمعرض آية.">
+
+  <link rel="icon" type="image/svg+xml" href="images/logo/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    .faq-item {
+      background: var(--bg-glass);
+      border: var(--glass-border);
+      border-radius: var(--radius-md);
+      margin-bottom: 16px;
+      overflow: hidden;
+      transition: border-color var(--transition-fast);
+    }
+    .faq-item.active {
+      border-color: var(--color-gold);
+    }
+    .faq-header {
+      padding: 20px 24px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 24px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      transition: all var(--transition-normal);
+    }
+    .faq-item.active .faq-content {
+      max-height: 300px;
+      padding: 0 24px 20px;
+    }
+    .faq-icon {
+      color: var(--color-gold);
+      transition: transform var(--transition-fast);
+    }
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-logo-wrap">
+      <div class="loader-spinner"></div>
+      <img src="images/logo/logo.png" alt="Logo" style="width: 100%; height: 100%; object-fit: contain;">
+    </div>
+    <div class="loader-brand" data-i18n="brand_name">معرض آية لتجارة السيارات</div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="header-brand">
+        <div class="logo-wrapper"><img src="images/logo/logo.png" alt="Logo" class="logo-img"></div>
+        <div class="brand-text">
+          <span class="brand-name" data-i18n="brand_name">معرض آية لتجارة السيارات</span>
+          <span class="brand-tagline" data-i18n="tagline">أبو موسى... لديكم لا خوف عليكم</span>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link" data-i18n="nav_home">الرئيسية</a></li>
+          <li><a href="about.html" class="nav-link" data-i18n="nav_about">عن المعرض</a></li>
+          <li><a href="cars.html" class="nav-link" data-i18n="nav_cars">السيارات</a></li>
+          <li><a href="services.html" class="nav-link" data-i18n="nav_services">خدماتنا</a></li>
+          <li><a href="financing.html" class="nav-link" data-i18n="nav_financing">التمويل</a></li>
+          <li><a href="gallery.html" class="nav-link" data-i18n="nav_gallery">معرض الصور</a></li>
+          <li><a href="offers.html" class="nav-link" data-i18n="nav_offers">العروض</a></li>
+          <li><a href="testimonials.html" class="nav-link" data-i18n="nav_testimonials">آراء العملاء</a></li>
+          <li><a href="faq.html" class="nav-link active" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
+          <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">اتصل بنا</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="action-btn search-trigger-btn"><i class="fas fa-search"></i></button>
+        <button class="action-btn theme-toggle-btn"><i class="fas fa-sun theme-toggle-icon"></i></button>
+        <button class="lang-toggle"><i class="fas fa-globe"></i><span class="lang-toggle-text">EN</span></button>
+        <a href="contact.html" class="btn btn-gold btn-header" data-i18n="book_now">احجز الآن</a>
+        <div class="mobile-nav-toggle"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-nav-drawer">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link" data-i18n="nav_home">الرئيسية</a></li>
+      <li><a href="about.html" class="mobile-nav-link" data-i18n="nav_about">عن المعرض</a></li>
+      <li><a href="cars.html" class="mobile-nav-link" data-i18n="nav_cars">السيارات</a></li>
+      <li><a href="services.html" class="mobile-nav-link" data-i18n="nav_services">خدماتنا</a></li>
+      <li><a href="financing.html" class="mobile-nav-link" data-i18n="nav_financing">التمويل</a></li>
+      <li><a href="gallery.html" class="mobile-nav-link" data-i18n="nav_gallery">معرض الصور</a></li>
+      <li><a href="offers.html" class="mobile-nav-link" data-i18n="nav_offers">العروض</a></li>
+      <li><a href="testimonials.html" class="mobile-nav-link" data-i18n="nav_testimonials">آراء العملاء</a></li>
+      <li><a href="faq.html" class="mobile-nav-link active" data-i18n="nav_faq">الأسئلة الشائعة</a></li>
+      <li><a href="contact.html" class="mobile-nav-link" data-i18n="nav_contact">اتصل بنا</a></li>
+    </ul>
+  </aside>
+
+  <!-- Title Banner -->
+  <section class="section" style="padding-top: calc(var(--header-height) + 60px); padding-bottom: 40px; background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.1) 0%, var(--bg-primary) 70%);">
+    <div class="container text-center" style="text-align: center;">
+      <span class="section-subtitle">مركز المساعدة</span>
+      <h1 class="section-title">الأسئلة الشائعة والإجابات</h1>
+      <p class="section-description">نحن هنا للإجابة عن كافة استفساراتك المتعلقة بالشراء والتمويل والضمان.</p>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion Container -->
+  <section class="section">
+    <div class="container" style="max-width: 900px;">
+      
+      <div class="faq-item active" data-animate="fade-up">
+        <div class="faq-header">
+          <span>ما هي الضمانات المقدمة عند شراء سيارة من معرض آية؟</span>
+          <i class="fas fa-chevron-down faq-icon"></i>
+        </div>
+        <div class="faq-content">
+          جميع السيارات بالمعرض خاضعة لفحص تقني 150 نقطة ومصحوبة بضمانات معتمدة تصل حتى 5 سنوات أو 100,000 كم تشمل المحرك، القير، والأنظمة الكهربائية.
+        </div>
+      </div>
+
+      <div class="faq-item" data-animate="fade-up">
+        <div class="faq-header">
+          <span>هل يتوفر خيار التمويل بدون دفعة أولى؟</span>
+          <i class="fas fa-chevron-down faq-icon"></i>
+        </div>
+        <div class="faq-content">
+          نعم، نوفر بالتعاون مع شركائنا من البنوك والشركات التمويلية برامج تقسيط ميسرة تتيح التمويل بدون دفعة أولى حسب شروط ونسبة الراتب.
+        </div>
+      </div>
+
+      <div class="faq-item" data-animate="fade-up">
+        <div class="faq-header">
+          <span>كيف يتم شحن وتوصيل السيارة للعملاء خارج مدينة الرياض؟</span>
+          <i class="fas fa-chevron-down faq-icon"></i>
+        </div>
+        <div class="faq-content">
+          نقوم بنقل وتوصيل السيارة بواسطة ناقلات VIP مغلقة ومؤمنة بالكامل إلى باب منزل العميل في جميع مناطق المملكة ودول الخليج.
+        </div>
+      </div>
+
+      <div class="faq-item" data-animate="fade-up">
+        <div class="faq-header">
+          <span>هل يمكنني استبدال سيارتي الحالية بسيارة أخرى من المعرض؟</span>
+          <i class="fas fa-chevron-down faq-icon"></i>
+        </div>
+        <div class="faq-content">
+          بالتأكيد، نوفر خدمة التقييم والاستبدال المباشر (Trade-In) حيث يقدم فريق الفحص لدينا تقييماً عادلاً لسيارتك واستكمال المبلغ المتبقي.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border: none;">
+        <div>&copy; 2026 معرض آية لتجارة السيارات (أبو موسى). جميع الحقوق محفوظة.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/theme.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/animation.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.faq-header').forEach(header => {
+        header.addEventListener('click', () => {
+          const item = header.parentElement;
+          item.classList.toggle('active');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+
