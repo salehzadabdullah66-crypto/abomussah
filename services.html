@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="css/forms.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/responsive.css">
+<base target="_blank">
 </head>
 <body>
 
@@ -54,12 +55,13 @@
       </nav>
 
       <div class="header-actions">
-        <button class="action-btn search-trigger-btn"><i class="fas fa-search"></i></button>
-        <button class="action-btn theme-toggle-btn"><i class="fas fa-sun theme-toggle-icon"></i></button>
-        <button class="lang-toggle"><i class="fas fa-globe"></i><span class="lang-toggle-text">EN</span></button>
-        <a href="contact.html" class="btn btn-gold btn-header" data-i18n="book_now">احجز الآن</a>
-        <div class="mobile-nav-toggle"><span></span><span></span><span></span></div>
-      </div>
+        <div class="mobile-nav-toggle" aria-label="Menu"><span></span><span></span><span></span></div>
+        <a href="https://wa.me/963936801748" target="_blank" class="action-btn action-btn-whatsapp" aria-label="WhatsApp"><i class="fab fa-whatsapp" style="color: #25d366;"></i></a>
+        <a href="tel:+963936801748" class="action-btn action-btn-phone" aria-label="Call"><i class="fas fa-phone"></i></a>
+        <button class="lang-toggle" aria-label="Switch Language"><i class="fas fa-globe"></i><span class="lang-toggle-text">EN</span></button>
+        <button class="action-btn theme-toggle-btn" aria-label="Toggle Theme"><i class="fas fa-sun theme-toggle-icon"></i></button>
+        <button class="action-btn search-trigger-btn" aria-label="Search"><i class="fas fa-search"></i></button>
+        <a href="contact.html" class="btn btn-gold btn-header" data-i18n="book_now">احجز الآن</a></div>
     </div>
   </header>
 
@@ -149,6 +151,5 @@
   <script src="js/animation.js"></script>
 </body>
 </html>
-
 
 
