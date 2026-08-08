@@ -96,8 +96,8 @@
   }
 
   .header-container {
-    flex-wrap: wrap;
-    row-gap: 8px;
+    flex-wrap: nowrap;
+    align-items: center;
     padding-left: 14px;
     padding-right: 14px;
   }
@@ -106,52 +106,9 @@
     display: none;
   }
 
+  /* إخفاء الناف الرئيسي بالكامل على الجوال — التنقل عبر القائمة الجانبية فقط */
   .site-header .main-nav {
-    display: flex;
-    order: 3;
-    width: 100%;
-    margin: 6px 0 2px 0;
-    padding: 0;
-    justify-content: center;
-  }
-
-  .site-header .nav-list {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 6px 8px;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-  }
-
-  .site-header .nav-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.8rem;
-    font-weight: 700;
-    padding: 5px 12px;
-    border-radius: var(--radius-full);
-    background: rgba(255, 255, 255, 0.07);
-    border: 1px solid var(--border-color-muted);
-    color: var(--text-secondary);
-    transition: all 0.25s ease;
-    white-space: nowrap;
-  }
-
-  .site-header .nav-link::after {
-    display: none;
-  }
-
-  .site-header .nav-link:hover,
-  .site-header .nav-link.active {
-    background: var(--gold-gradient);
-    color: #000000;
-    font-weight: 800;
-    border-color: var(--color-gold);
-    box-shadow: 0 0 12px rgba(212, 175, 55, 0.45);
+    display: none !important;
   }
 
   .mobile-nav-toggle {
@@ -159,7 +116,7 @@
   }
 
   .hero-section {
-    padding-top: 175px;
+    padding-top: 110px;
   }
 
   .hero-content-grid {
@@ -188,8 +145,12 @@
 
   /* About page fixes on tablet/mobile */
   .about-banner-section {
-    padding-top: 160px !important;
+    padding-top: 100px !important;
     padding-bottom: 30px !important;
+  }
+
+  .page-banner-section {
+    padding-top: 100px;
   }
 
   .about-section {
@@ -270,7 +231,7 @@
 
   /* About page — small mobile spacing fixes */
   .about-banner-section {
-    padding-top: 150px !important;
+    padding-top: 90px !important;
     padding-bottom: 20px !important;
   }
 
