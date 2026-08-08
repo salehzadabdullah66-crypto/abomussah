@@ -80,7 +80,8 @@
   align-items: center;
   justify-content: flex-start;
   min-height: 62px;
-  min-width: 320px;
+  max-width: 100%;
+  box-sizing: border-box;
   box-shadow: var(--shadow-sm);
   position: relative;
   overflow: hidden;

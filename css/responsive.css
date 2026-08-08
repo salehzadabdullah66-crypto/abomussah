@@ -3,6 +3,32 @@
    Responsive Breakpoints & Mobile Adaptations
 ------------------------------------------------------------------- */
 
+/* -------------------------------------------------------------------
+   Base Grid Classes (Responsive-friendly, no inline styles)
+------------------------------------------------------------------- */
+
+/* 3-column grids used across pages */
+.cars-grid,
+.gallery-grid,
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.gallery-grid {
+  gap: 24px;
+}
+
+/* 2-column grids for financing and contact forms */
+.financing-grid,
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
 /* Breakpoint 1920px (Ultra Wide) */
 @media (min-width: 1920px) {
   :root {
@@ -190,12 +216,38 @@
   .filter-grid {
     grid-template-columns: 1fr;
   }
+
+  /* Testimonials grid: collapse to single column on tablet */
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* 3-col page grids collapse to 2 cols on tablet */
+  .cars-grid,
+  .gallery-grid,
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* 2-col grids go single column */
+  .financing-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Breakpoint 576px (Mobile Large) */
 @media (max-width: 576px) {
   .features-grid {
     grid-template-columns: 1fr;
+  }
+  .cars-grid,
+  .gallery-grid,
+  .services-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
   .stats-banner-grid {
     grid-template-columns: 1fr;
@@ -211,6 +263,9 @@
   .hero-owner-tagline {
     font-size: 1.15rem;
     padding: 10px 16px;
+    min-width: unset !important;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   /* About page — small mobile spacing fixes */
@@ -232,6 +287,26 @@
     width: 220px !important;
     margin-top: 0 !important;
   }
+
+  /* Fiery audio card mobile fix */
+  .fiery-audio-header {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .fiery-audio-card {
+    padding: 20px 14px;
+  }
+  .fiery-player-box {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 12px 14px;
+  }
+  .fiery-equalizer {
+    width: 100%;
+    justify-content: center;
+    gap: 3px;
+  }
 }
 
 /* Breakpoint 480px & 320px (Small Mobiles) */
@@ -249,5 +324,70 @@
   }
   .owner-card-img {
     height: 300px;
+  }
+
+  /* Prevent horizontal overflow */
+  body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  /* Header actions compact on very small screens */
+  .header-actions {
+    gap: 6px;
+  }
+
+  .action-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 0.95rem;
+  }
+
+  .lang-toggle {
+    padding: 4px 8px;
+    font-size: 0.78rem;
+  }
+
+  /* Stats compact */
+  .hero-stats-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .stat-number {
+    font-size: 1.6rem;
+  }
+
+  .stat-label {
+    font-size: 0.72rem;
+  }
+
+  /* Section title smaller */
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  /* Fix newsletter form on small mobile */
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form .btn {
+    width: auto;
+    align-self: flex-end;
+  }
+
+  /* Countdown units smaller */
+  .countdown-unit {
+    width: 54px;
+    height: 54px;
+  }
+
+  .countdown-num {
+    font-size: 1.1rem;
   }
 }

@@ -360,8 +360,24 @@ html[lang="en"] .favorite-btn {
 }
 
 /* ===================================================================
-   5. Fiery Audio Testimonial Card (إطار ناري فاخر للتسجيل الصوتي)
+   5. Testimonials Grid Layout
    =================================================================== */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* ===================================================================
+   6. Fiery Audio Testimonial Card (إطار ناري فاخر للتسجيل الصوتي)
+   =================================================================== */
+.fiery-audio-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
 .fiery-audio-card {
   position: relative;
   background: rgba(18, 12, 25, 0.9);
