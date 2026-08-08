@@ -350,3 +350,106 @@ html[lang="en"] .mobile-nav-drawer.open {
   opacity: 1;
   visibility: visible;
 }
+
+/* ================================================================
+   الهيدر على شاشات الجوال (≤992px)
+   لوغو فقط على اليمين | همبرغر ☰ فقط على اليسار
+================================================================ */
+@media (max-width: 992px) {
+
+  /* ارتفاع الهيدر ثابت */
+  .site-header {
+    height: 64px !important;
+    padding: 0 !important;
+  }
+
+  /* توزيع عناصر الهيدر */
+  .header-container {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0 16px !important;
+    height: 64px !important;
+  }
+
+  /* اللوغو: مرئي دائماً */
+  .header-brand {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .header-brand .logo-wrapper {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .header-brand .brand-name {
+    display: block !important;
+    font-size: 0.88rem !important;
+  }
+
+  .header-brand .brand-tagline {
+    display: none !important;
+  }
+
+  /* الناف: مخفي تماماً */
+  .main-nav {
+    display: none !important;
+  }
+
+  /* حاوية الأيقونات */
+  .header-actions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* ❌ إخفاء: بحث */
+  .search-trigger-btn {
+    display: none !important;
+  }
+
+  /* ❌ إخفاء: الثيم */
+  .theme-toggle-btn {
+    display: none !important;
+  }
+
+  /* ❌ إخفاء: اللغة */
+  .lang-toggle {
+    display: none !important;
+  }
+
+  /* ✅ إظهار: هاتف */
+  a.action-btn[href^="tel"] {
+    display: flex !important;
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 1rem !important;
+  }
+
+  /* ✅ إظهار: واتساب */
+  a.action-btn[href*="wa.me"] {
+    display: flex !important;
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 1.1rem !important;
+  }
+
+  /* ❌ إخفاء: زر احجز الآن */
+  .btn-header {
+    display: none !important;
+  }
+
+  /* ✅ إظهار: همبرغر فقط */
+  .mobile-nav-toggle {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    width: 30px !important;
+    height: 20px !important;
+  }
+}
