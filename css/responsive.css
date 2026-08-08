@@ -95,24 +95,91 @@
     padding: 6px 0;
   }
 
+  /* ============================
+     ترتيب الهيدر على الجوال
+     لوغو | ← فراغ → | أيقونات + همبرغر
+     ============================ */
+
   .header-container {
     flex-wrap: nowrap;
     align-items: center;
+    justify-content: space-between;
     padding-left: 14px;
     padding-right: 14px;
+    gap: 0;
+    height: 64px;
   }
 
+  /* اللوغو والاسم: اجعلهم مرئيين بوضوح */
+  .header-brand {
+    flex-shrink: 0;
+    gap: 10px;
+  }
+
+  .header-brand .logo-wrapper {
+    width: 42px;
+    height: 42px;
+  }
+
+  .header-brand .brand-name {
+    font-size: 0.95rem;
+    white-space: nowrap;
+  }
+
+  .header-brand .brand-tagline {
+    display: none; /* نخفي الشعار الفرعي لتوفير المساحة */
+  }
+
+  /* أيقونات الهيدر على الجوال */
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+    margin-right: auto;  /* RTL: يدفع للجهة اليسرى */
+  }
+
+  html[lang="en"] .header-actions {
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  /* إخفاء: زر الحجز */
   .site-header .header-actions .btn {
-    display: none;
+    display: none !important;
   }
 
-  /* إخفاء الناف الرئيسي بالكامل على الجوال — التنقل عبر القائمة الجانبية فقط */
+  /* إخفاء: البحث، الثيم، اللغة (يكفي الدروار) */
+  .site-header .search-trigger-btn,
+  .site-header .theme-toggle-btn,
+  .site-header .lang-toggle {
+    display: none !important;
+  }
+
+  /* إظهار: واتساب + هاتف + همبرغر فقط */
+  .site-header .action-btn[aria-label="Call Us"],
+  .site-header .action-btn[aria-label="WhatsApp"] {
+    display: flex;
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+
+  /* إخفاء الناف الرئيسي بالكامل على الجوال */
   .site-header .main-nav {
     display: none !important;
   }
 
+  /* ☰ همبرغر */
   .mobile-nav-toggle {
     display: flex;
+    flex-shrink: 0;
+    margin-right: 4px;
+  }
+
+  html[lang="en"] .mobile-nav-toggle {
+    margin-right: 0;
+    margin-left: 4px;
   }
 
   .hero-section {
@@ -297,20 +364,26 @@
     padding-right: 14px;
   }
 
-  /* Header actions compact on very small screens */
+  /* Header actions: very small screens */
   .header-actions {
     gap: 6px;
   }
 
-  .action-btn {
-    width: 36px;
-    height: 36px;
-    font-size: 0.95rem;
+  /* على الشاشات الصغيرة جداً: أخفِ الهاتف، أبقِ واتساب + همبرغر فقط */
+  .site-header .action-btn[aria-label="Call Us"] {
+    display: none !important;
   }
 
-  .lang-toggle {
-    padding: 4px 8px;
-    font-size: 0.78rem;
+  /* تصغير الأيقونات */
+  .action-btn {
+    width: 34px;
+    height: 34px;
+    font-size: 0.9rem;
+  }
+
+  /* إخفاء اسم الشركة الكامل، إظهار اللوغو فقط */
+  .header-brand .brand-name {
+    display: none;
   }
 
   /* Stats compact */
