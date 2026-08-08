@@ -95,91 +95,69 @@
     padding: 6px 0;
   }
 
-  /* ============================
-     ترتيب الهيدر على الجوال
-     لوغو | ← فراغ → | أيقونات + همبرغر
-     ============================ */
-
+  /* هيدر الجوال: لوغو على اليمين | همبرغر ☰ على اليسار فقط */
   .header-container {
+    display: flex;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
-    padding-left: 14px;
-    padding-right: 14px;
-    gap: 0;
+    padding: 0 16px;
     height: 64px;
+    width: 100%;
   }
 
-  /* اللوغو والاسم: اجعلهم مرئيين بوضوح */
+  /* اللوغو دائماً مرئي */
   .header-brand {
-    flex-shrink: 0;
+    display: flex !important;
+    align-items: center;
     gap: 10px;
+    flex-shrink: 0;
+    min-width: 0;
   }
 
   .header-brand .logo-wrapper {
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
   }
 
   .header-brand .brand-name {
-    font-size: 0.95rem;
-    white-space: nowrap;
+    font-size: 0.88rem;
+    display: block !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 180px;
   }
 
   .header-brand .brand-tagline {
-    display: none; /* نخفي الشعار الفرعي لتوفير المساحة */
+    display: none !important;
   }
 
-  /* أيقونات الهيدر على الجوال */
+  /* إخفاء الناف الرئيسي */
+  .main-nav {
+    display: none !important;
+  }
+
+  /* حاوية الأيقونات */
   .header-actions {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     flex-shrink: 0;
-    margin-right: auto;  /* RTL: يدفع للجهة اليسرى */
   }
 
-  html[lang="en"] .header-actions {
-    margin-right: 0;
-    margin-left: auto;
-  }
-
-  /* إخفاء: زر الحجز */
-  .site-header .header-actions .btn {
+  /* إخفاء كل العناصر داخل header-actions */
+  .header-actions > * {
     display: none !important;
   }
 
-  /* إخفاء: البحث، الثيم، اللغة (يكفي الدروار) */
-  .site-header .search-trigger-btn,
-  .site-header .theme-toggle-btn,
-  .site-header .lang-toggle {
-    display: none !important;
-  }
-
-  /* إظهار: واتساب + هاتف + همبرغر فقط */
-  .site-header .action-btn[aria-label="Call Us"],
-  .site-header .action-btn[aria-label="WhatsApp"] {
-    display: flex;
-    width: 38px;
-    height: 38px;
-    font-size: 1rem;
-  }
-
-  /* إخفاء الناف الرئيسي بالكامل على الجوال */
-  .site-header .main-nav {
-    display: none !important;
-  }
-
-  /* ☰ همبرغر */
-  .mobile-nav-toggle {
-    display: flex;
-    flex-shrink: 0;
-    margin-right: 4px;
-  }
-
-  html[lang="en"] .mobile-nav-toggle {
-    margin-right: 0;
-    margin-left: 4px;
+  /* إظهار همبرغر فقط */
+  .header-actions > .mobile-nav-toggle {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
   }
 
   .hero-section {
