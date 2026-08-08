@@ -234,22 +234,25 @@
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  /* RTL Order: Hamburger | WhatsApp | Phone | Lang | Dark | Search */
-  /* In RTL flex, items flow right-to-left, so first child = rightmost */
+  /* ترتيب الأيقونات في RTL:
+     اللوغو على اليمين (تلقائي في RTL)
+     الأيقونات على اليسار بهذا الترتيب من اليمين لليسار:
+     🌙 الثيم | 🌐 اللغة | 📞 الهاتف | 💬 واتساب | ☰ القائمة
+  */
   .header-actions {
-    flex-direction: row-reverse; /* visual: hamburger right, search left */
+    flex-direction: row;
   }
 
-  /* Explicit ordering for safety */
-  .header-actions .mobile-nav-toggle       { order: 1; }
-  .header-actions .action-btn-whatsapp,
-  .header-actions a[href*="wa.me"]        { order: 2; }
-  .header-actions .action-btn-phone,
-  .header-actions a[href^="tel"]          { order: 3; }
-  .header-actions .lang-toggle             { order: 4; }
-  .header-actions .theme-toggle-btn        { order: 5; }
-  .header-actions .search-trigger-btn      { order: 6; }
-  .header-actions .btn-header              { order: 7; display: none !important; }
+  /* إخفاء البحث وزر الحجز */
+  .header-actions .search-trigger-btn      { display: none !important; }
+  .header-actions .btn-header              { display: none !important; }
+
+  /* ترتيب العناصر */
+  .header-actions .theme-toggle-btn        { order: 1; }
+  .header-actions .lang-toggle             { order: 2; }
+  .header-actions a[href^="tel"]           { order: 3; }
+  .header-actions a[href*="wa.me"]         { order: 4; }
+  .header-actions .mobile-nav-toggle       { order: 5; }
 
   /* ---- MOBILE DRAWER ---- */
   .mobile-drawer-overlay {
