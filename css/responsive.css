@@ -1057,57 +1057,59 @@
 }
 
 /* ============================================
-   HERO — الجوال فقط
-   ① العنوان ② نص أبو موسى ③ الصورة ④ البقية
+   HERO — الجوال فقط (≤768px)
+   الترتيب: ① عنوان ② tagline ③ صورة ④ بقية النصوص
    ============================================ */
 @media (max-width: 768px) {
 
+  /* تحويل الـ Grid إلى عمود واحد */
   .hero-content-grid {
     display: flex !important;
     flex-direction: column !important;
     gap: 18px !important;
   }
 
-  /* العنوان — أول شيء (DOM order: 1st) */
-  .hero-title {
-    order: 1 !important;
-    text-align: center !important;
-    font-size: 1.75rem !important;
-    min-height: unset !important;
+  /* إلغاء خصائص الـ Grid على الديسكتوب */
+  .hero-title,
+  .hero-owner-tagline,
+  .hero-text-box,
+  .hero-visual-box {
     grid-column: unset !important;
     grid-row: unset !important;
   }
 
-  /* نص أبو موسى — ثاني (DOM order: 2nd) */
+  /* ① h1 — أول شيء في DOM، لا يحتاج order */
+  .hero-title {
+    text-align: center !important;
+    font-size: 1.75rem !important;
+    min-height: unset !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* ② tagline — ثاني شيء في DOM، لا يحتاج order */
   .hero-owner-tagline {
-    order: 2 !important;
     align-self: center !important;
     justify-content: center !important;
     font-size: 1.05rem !important;
     padding: 10px 14px !important;
     width: 100% !important;
     box-sizing: border-box !important;
-    grid-column: unset !important;
-    grid-row: unset !important;
+    margin-bottom: 0 !important;
   }
 
-  /* الصورة — ثالث (DOM order: 4th → نرفعها بـ order:3) */
+  /* ③ الصورة — تُرفع بـ order:1 لتسبق hero-text-box */
   .hero-visual-box {
-    order: 3 !important;
-    grid-column: unset !important;
-    grid-row: unset !important;
+    order: 1 !important;
   }
 
-  /* بقية النصوص (badge+وصف+أزرار+إحصائيات) — رابع */
+  /* ④ بقية النصوص — تأتي بعد الصورة */
   .hero-text-box {
-    order: 4 !important;
+    order: 2 !important;
     align-items: center !important;
     text-align: center !important;
-    grid-column: unset !important;
-    grid-row: unset !important;
   }
 
-  .hero-description  { max-width: 100% !important; }
-  .hero-buttons      { justify-content: center !important; }
-  .hero-stats-row    { justify-content: center !important; }
+  .hero-description { max-width: 100% !important; }
+  .hero-buttons     { justify-content: center !important; }
+  .hero-stats-row   { justify-content: center !important; }
 }
