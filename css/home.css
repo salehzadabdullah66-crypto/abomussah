@@ -27,20 +27,47 @@
   opacity: 0.6;
 }
 
+/* تخطيط الهيرو: الديسكتوب — 4 عناصر مباشرة في Grid */
 .hero-content-grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 50px;
-  align-items: center;
+  grid-template-rows: auto auto 1fr;
+  gap: 0 50px;
+  align-items: start;
   position: relative;
   z-index: 2;
 }
 
+/* العنوان: العمود الأيسر / الصف الأول */
+.hero-title {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+/* نص أبو موسى: العمود الأيسر / الصف الثاني */
+.hero-owner-tagline {
+  grid-column: 1;
+  grid-row: 2;
+  margin-bottom: 0;
+}
+
+/* بقية النصوص: العمود الأيسر / الصف الثالث */
 .hero-text-box {
+  grid-column: 1;
+  grid-row: 3;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
+
+/* الصورة: العمود الأيمن / تمتد كل الصفوف */
+.hero-visual-box {
+  grid-column: 2;
+  grid-row: 1 / 4;
+  align-self: center;
+}
+
+
 
 .hero-badge {
   display: inline-flex;
@@ -740,4 +767,65 @@ html[lang="en"] .custom-play-btn i {
     text-align: center;
   }
 }
+
+/* ===== الجوال فقط: العنوان ونص أبو موسى فوق الصورة ===== */
+@media (max-width: 768px) {
+  .hero-content-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* نفرد محتويات hero-text-box في الـ flex */
+  .hero-text-box {
+    display: contents;
+  }
+
+  /* العنوان الرئيسي فوق الصورة */
+  .hero-title {
+    order: 1;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
+  /* نص أبو موسى فوق الصورة */
+  .hero-owner-tagline {
+    order: 2;
+    align-self: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    padding: 10px 16px;
+  }
+
+  /* الصورة */
+  .hero-visual-box {
+    order: 3;
+  }
+
+  /* Badge تحت الصورة */
+  .hero-badge {
+    order: 4;
+    align-self: center;
+    text-align: center;
+  }
+
+  /* الوصف والأزرار والإحصائيات تحت الصورة */
+  .hero-description {
+    order: 5;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .hero-buttons {
+    order: 6;
+    justify-content: center;
+  }
+
+  .hero-stats-row {
+    order: 7;
+    justify-content: center;
+  }
+}
+
+
 

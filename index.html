@@ -115,17 +115,20 @@
     <div class="hero-bg-particles"></div>
     <div class="container">
       <div class="hero-content-grid">
-        <!-- Hero Text Column -->
+
+        <!-- ① العنوان الرئيسي — مباشر في الـ Grid -->
+        <h1 class="hero-title" data-i18n="hero_title">الفخامة والأداء في مكان واحد</h1>
+
+        <!-- ② نص أبو موسى المتحرك — مباشر في الـ Grid -->
+        <div class="hero-owner-tagline">
+          <span class="tagline-text"></span><span class="tagline-cursor"></span>
+        </div>
+
+        <!-- ③ بقية النصوص (badge + وصف + أزرار + إحصائيات) -->
         <div class="hero-text-box" data-animate="fade-up">
           <div class="hero-badge">
             <i class="fas fa-crown"></i>
             <span data-i18n="hero_subtitle">معرض آية لتجارة السيارات - خيارك الأول للسيارات الفاخرة</span>
-          </div>
-          <h1 class="hero-title" data-i18n="hero_title">الفخامة والأداء في مكان واحد</h1>
-          
-          <!-- Prominent Owner Tagline -->
-          <div class="hero-owner-tagline" data-animate="fade-up">
-            <span class="tagline-text"></span><span class="tagline-cursor"></span>
           </div>
 
           <p class="hero-description" data-i18n="hero_desc">
@@ -158,7 +161,7 @@
           </div>
         </div>
 
-        <!-- Hero Visual Column - Owner Feature Spotlight Glass Card -->
+        <!-- ④ صورة المالك -->
         <div class="hero-visual-box" data-animate="zoom-in">
           <div class="hero-main-card floating-element">
             <div class="owner-card-frame">
@@ -170,7 +173,9 @@
             </div>
           </div>
         </div>
+
       </div>
+
     </div>
 
     <!-- Animated Scroll Indicator -->
@@ -181,6 +186,8 @@
       <span data-i18n="scroll_down">تمرير للأسفل</span>
     </div>
   </section>
+
+
 
 
 
