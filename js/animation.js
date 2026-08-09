@@ -101,43 +101,53 @@ function initOfferCountdown() {
 }
 
 /* -------------------------------------------------------------------
-   Luxury Cinematic Hero Tagline Typing Animation
-   - Pure HTML5 + CSS3 + Vanilla JavaScript (No external libraries)
-   - 60 FPS requestAnimationFrame engine
-   - Preserves Arabic RTL letter shaping & ligatures
-   - Golden glow pulse on completion & persistent blinking cursor
+   Luxury Cinematic Hero Typing Animation — 3-Phase Sequential Engine
+   Phase 1: كتابة نص الـ badge مرة واحدة
+   Phase 2: كتابة عنوان الهيرو مرة واحدة
+   Phase 3: نص أبو موسى يُكتب ويُمحى بشكل متكرر
 ------------------------------------------------------------------- */
 function initHeroTaglineTyping() {
-  const taglineEl = document.querySelector('.hero-owner-tagline');
+  const badgeSpan      = document.querySelector('.hero-badge span[data-i18n="hero_subtitle"]');
+  const titleEl        = document.querySelector('.hero-title');
+  const taglineEl      = document.querySelector('.hero-owner-tagline');
   if (!taglineEl) return;
 
-  // Customization Configuration
-  const config = {
-    // Primary Arabic Tagline text
-    textAr: "أبو موسى لديكم لا خوف عليكم",
-    textEn: "Abu Musa... With us, you have no fears",
-    
-    // Speed settings in milliseconds per character (Slower & more majestic speed)
-    typeSpeedMin: 110,    // Typing speed min (110-140 ms per char)
-    typeSpeedMax: 140,    // Typing speed max (110-140 ms per char)
-    deleteSpeedMin: 55,   // Deleting speed min (55-75 ms per char)
-    deleteSpeedMax: 75,   // Deleting speed max (55-75 ms per char)
-    
-    // Pause intervals in milliseconds
-    pauseEnd: 2500,       // 2.5 seconds pause after sentence is fully typed
-    pauseStart: 700       // 700ms pause after text is fully deleted
-  };
+  // ---- نصوص ثابتة لكل مرحلة ----
+  const badgeTextAr  = 'معرض آية لتجارة السيارات - خيارك الأول للسيارات الفاخرة';
+  const badgeTextEn  = 'Aya Car Trading - Your First Choice for Luxury Cars';
+  const titleTextAr  = 'الفخامة والأداء في مكان واحد';
+  const titleTextEn  = 'Luxury & Performance in One Place';
+  const taglineTextAr = 'أبو موسى... لديكم لا خوف عليكم';
+  const taglineTextEn = 'Abu Musa... With us, you have no fears';
 
-  // Remove data-i18n attribute to prevent standard text content overwrite
+  function getLang() {
+    return document.documentElement.getAttribute('lang') || 'ar';
+  }
+
+  // ---- إعداد المرحلة الأولى: Badge ----
+  let badgeOriginalContent = '';
+  if (badgeSpan) {
+    badgeOriginalContent = badgeSpan.textContent;
+    badgeSpan.textContent = '';
+    badgeSpan.removeAttribute('data-i18n');
+  }
+
+  // ---- إعداد المرحلة الثانية: Title ----
+  let titleOriginalContent = '';
+  if (titleEl) {
+    titleOriginalContent = titleEl.textContent;
+    titleEl.textContent = '';
+    titleEl.removeAttribute('data-i18n');
+    titleEl.style.minHeight = '4.5rem'; // احجز المساحة لمنع القفز
+  }
+
+  // ---- إعداد المرحلة الثالثة: Tagline ----
   taglineEl.removeAttribute('data-i18n');
-
-  // Build clean DOM structure
-  let textSpan = taglineEl.querySelector('.tagline-text');
+  let textSpan   = taglineEl.querySelector('.tagline-text');
   let cursorSpan = taglineEl.querySelector('.tagline-cursor');
-
   if (!textSpan || !cursorSpan) {
     taglineEl.innerHTML = '';
-    textSpan = document.createElement('span');
+    textSpan   = document.createElement('span');
     textSpan.className = 'tagline-text';
     cursorSpan = document.createElement('span');
     cursorSpan.className = 'tagline-cursor';
@@ -146,89 +156,107 @@ function initHeroTaglineTyping() {
     taglineEl.appendChild(cursorSpan);
   }
 
-  // Resolve active language text target
-  function getActiveText() {
-    const lang = document.documentElement.getAttribute('lang') || 'ar';
-    return lang === 'en' ? config.textEn : config.textAr;
-  }
-
-  // Natural speed variation generator
-  function getRandomDelay(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-
-  let charIndex = 0;
-  let isDeleting = false;
-  let isPaused = false;
-  let lastTime = 0;
-  let currentDelay = getRandomDelay(config.typeSpeedMin, config.typeSpeedMax);
-
-  function animateTagline(timestamp) {
-    if (!lastTime) lastTime = timestamp;
-    const elapsed = timestamp - lastTime;
-
-    if (elapsed >= currentDelay && !isPaused) {
-      lastTime = timestamp;
-      const targetText = getActiveText();
-
-      if (!isDeleting) {
-        // Typing phase: character by character right-to-left
-        charIndex++;
-        textSpan.textContent = targetText.slice(0, charIndex);
-
-        // Micro-animation entry effect trigger
-        textSpan.classList.add('typing-char-active');
-        setTimeout(() => textSpan.classList.remove('typing-char-active'), 150);
-
-        if (charIndex >= targetText.length) {
-          // Sentence fully typed -> trigger golden glow pulse & 2.5s pause
-          isPaused = true;
-          textSpan.classList.add('glow-pulse');
-
-          setTimeout(() => {
-            textSpan.classList.remove('glow-pulse');
-            isDeleting = true;
-            isPaused = false;
-            currentDelay = getRandomDelay(config.deleteSpeedMin, config.deleteSpeedMax);
-            lastTime = performance.now();
-          }, config.pauseEnd);
-        } else {
-          currentDelay = getRandomDelay(config.typeSpeedMin, config.typeSpeedMax);
-        }
+  // ---- مساعد: كتابة نص في عنصر ----
+  function typeText(targetEl, text, speedMin, speedMax, onDone) {
+    let i = 0;
+    function step() {
+      if (i <= text.length) {
+        targetEl.textContent = text.slice(0, i);
+        i++;
+        const delay = Math.floor(Math.random() * (speedMax - speedMin + 1)) + speedMin;
+        setTimeout(step, delay);
       } else {
-        // Deleting phase: character by character left-to-right
-        charIndex--;
-        textSpan.textContent = targetText.slice(0, charIndex);
-
-        if (charIndex <= 0) {
-          // Text fully erased -> trigger brief 700ms pause
-          isPaused = true;
-          
-          setTimeout(() => {
-            isDeleting = false;
-            isPaused = false;
-            currentDelay = getRandomDelay(config.typeSpeedMin, config.typeSpeedMax);
-            lastTime = performance.now();
-          }, config.pauseStart);
-        } else {
-          currentDelay = getRandomDelay(config.deleteSpeedMin, config.deleteSpeedMax);
-        }
+        if (onDone) onDone();
       }
     }
-
-    requestAnimationFrame(animateTagline);
+    step();
   }
 
-  // Observe HTML lang attribute for dynamic language switching
-  const langObserver = new MutationObserver(() => {
-    const newTarget = getActiveText();
-    if (charIndex > newTarget.length) {
-      charIndex = newTarget.length;
+  // ---- مساعد: محو نص من عنصر ----
+  function deleteText(targetEl, speedMin, speedMax, onDone) {
+    let text = targetEl.textContent;
+    let i = text.length;
+    function step() {
+      if (i >= 0) {
+        targetEl.textContent = text.slice(0, i);
+        i--;
+        const delay = Math.floor(Math.random() * (speedMax - speedMin + 1)) + speedMin;
+        setTimeout(step, delay);
+      } else {
+        if (onDone) onDone();
+      }
     }
+    step();
+  }
+
+  // ---- المرحلة الثالثة: الكتابة والمحو المتكرر لنص أبو موسى ----
+  function startTaglineLoop() {
+    function loop() {
+      const text = getLang() === 'en' ? taglineTextEn : taglineTextAr;
+      typeText(textSpan, text, 90, 130, () => {
+        // إضع توهج ذهبي عند اكتمال الكتابة
+        textSpan.classList.add('glow-pulse');
+        setTimeout(() => {
+          textSpan.classList.remove('glow-pulse');
+          // محو بعد توقف 2.5 ثانية
+          deleteText(textSpan, 45, 65, () => {
+            // توقف 700 مللي ثانية ثم إعادة الدورة
+            setTimeout(loop, 700);
+          });
+        }, 2500);
+      });
+    }
+    loop();
+  }
+
+  // ---- تشغيل المراحل بالتسلسل ----
+  function runPhases() {
+    const lang = getLang();
+
+    // المرحلة 1: كتابة الـ badge
+    if (badgeSpan) {
+      const badgeText = lang === 'en' ? badgeTextEn : badgeTextAr;
+      typeText(badgeSpan, badgeText, 30, 55, () => {
+        // توقف قصير ثم المرحلة 2
+        setTimeout(() => {
+
+          // المرحلة 2: كتابة العنوان الرئيسي
+          if (titleEl) {
+            const titleText = lang === 'en' ? titleTextEn : titleTextAr;
+            typeText(titleEl, titleText, 60, 95, () => {
+              // توقف ثم المرحلة 3
+              setTimeout(() => {
+                startTaglineLoop();
+              }, 400);
+            });
+          } else {
+            setTimeout(() => startTaglineLoop(), 400);
+          }
+
+        }, 300);
+      });
+    } else {
+      // لا يوجد badge — ابدأ مباشرة من العنوان
+      if (titleEl) {
+        const titleText = lang === 'en' ? titleTextEn : titleTextAr;
+        typeText(titleEl, titleText, 60, 95, () => {
+          setTimeout(() => startTaglineLoop(), 400);
+        });
+      } else {
+        startTaglineLoop();
+      }
+    }
+  }
+
+  // ابدأ بعد 600ms لإتاحة تحميل الصفحة
+  setTimeout(runPhases, 600);
+
+  // مراقبة تغيير اللغة لإعادة ضبط النصوص
+  const langObserver = new MutationObserver(() => {
+    const lang = getLang();
+    if (badgeSpan) badgeSpan.textContent = lang === 'en' ? badgeTextEn : badgeTextAr;
+    if (titleEl)   titleEl.textContent   = lang === 'en' ? titleTextEn : titleTextAr;
   });
   langObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
-
-  // Start requestAnimationFrame loop
-  requestAnimationFrame(animateTagline);
 }
 
