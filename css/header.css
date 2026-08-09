@@ -183,8 +183,13 @@
     flex-shrink: 0;
   }
 
-  /* إخفاء زر "احجز الآن" في الهيدر على الجوال */
+  /* إخفاء زر "احجز الآن" والواتساب والهاتف في الهيدر على الجوال */
   .btn-header {
+    display: none !important;
+  }
+
+  .action-btn-whatsapp,
+  .action-btn-phone {
     display: none !important;
   }
 
